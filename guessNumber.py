@@ -41,6 +41,7 @@ def computer_guess(number):
             limite_inferior = prediccionPCU +1
     print(f'!!CPU has guess your number. It was:  {number}') #terminamos con el loop
 
- 
+
+    computer_guess(20)
 
 
