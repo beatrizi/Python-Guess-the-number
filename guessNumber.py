@@ -33,7 +33,7 @@ def computer_guess(number):
             prediccionPCU = limite_inferior #tb puede ser el limite inferior
         
         #Obtener feedback del usuario para ayudar a adivinar el numero a la compu y convertirlo en mayuscula
-        user_input = input(f'El numero que adivino el CPU es: {prediccionPCU}\n- si es muy alta, ingresa (A)\n- si es baja, ingresa (B)\n- si es correcta ingresa (C)\n  ')
+        user_input = input(f'El numero que adivino el CPU es: {prediccionPCU}\n- si es muy alta, ingresa (A)\n- si es baja, ingresa (B)\n- si es correcta ingresa (C)\n  ').lower()
 
         if user_input =="A":
             limite_superior = prediccionPCU-1
