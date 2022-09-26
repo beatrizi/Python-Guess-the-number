@@ -25,7 +25,7 @@ def computer_guess(number):
 
 
     #pedir repuesta al usuario usaremos while para predecir el numero seleccionado del usuario
-    while user_input != "C":
+    while user_input != "c":
         #generar prediccion
         if limite_inferior != limite_superior:
             prediccionPCU = random.randint(limite_inferior,limite_superior)
@@ -35,9 +35,9 @@ def computer_guess(number):
         #Obtener feedback del usuario para ayudar a adivinar el numero a la compu y convertirlo en mayuscula
         user_input = input(f'El numero que adivino el CPU es: {prediccionPCU}\n- si es muy alta, ingresa (A)\n- si es baja, ingresa (B)\n- si es correcta ingresa (C)\n  ').lower()
 
-        if user_input =="A":
+        if user_input =="a":
             limite_superior = prediccionPCU-1
-        elif user_input == "B":
+        elif user_input == "b":
             limite_inferior = prediccionPCU +1
     print(f'!!CPU has guess your number. It was:  {number}') #terminamos con el loop
 
