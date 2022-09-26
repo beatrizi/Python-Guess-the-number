@@ -20,30 +20,34 @@ print('''
 
 def guess(max_number):
     #max_number is going be the range of number to guess
-    print("Guess the number that the computer has choose")
+    print("Guess the number that the computer has choosen")
   
 
-    computer_number = random.randint(1, max_number) # número aleatorio entre 1 y max_number.
+    computer_number = random.randint(1, max_number) # número aleatorio entre 1 y max_number, inclusive.En parentesis ponenemos 2 parametros.
 
-    # La predicción es 0 inicialmente para que no coincida con el número aleatorio. 
-    predicción = 0
+    # La user_prediction es 0 inicialmente para que no coincida con el número aleatorio. 
+    user_prediction = 0  # cero sera diferente a computer_number
 
-    # Continuar prediciendo el número hasta que la predicción sea correcta.
-    while predicción != computer_number:
+    # Continuar prediciendo el número hasta que la user_prediction sea correcta.
+    # No sabemos cual sera el numero de iteraciones
+
+    while user_prediction != computer_number:
         # El usuario ingresa un número.
-        predicción = int(input(f'Adivina un número entre 1 y {max_number}: '))
+        # cualquier valor que ingresa sera una cadena de caracteres y en este caso hay que catear
+        user_prediction = int(input(f'Adivina un número entre 1 y {max_number}: ')) #type F-string
         # Si el número es menor que el número aleatorio, se 
         # muestra un mensaje.
-        if predicción < computer_number:
-            print('Intenta otra vez. Este número es muy pequeño.')
+        if user_prediction < computer_number:
+            print('Try again. The number you are writing is small than the number I am thinking.')
         # Si el número es mayor que el número aleatorio, se
         # muestra un mensaje.
-        elif predicción > computer_number:
-            print('Intenta otra vez. Este número es muy grande.')
+        elif user_prediction > computer_number:
+            print('Try again. The number you are writing too big than the number I am thinking.')
 
     # El ciclo o bucle se detiene cuando el usuario adivina el número
     # correctamente y se muestra un mensaje final.
-    print(f'¡Felicitaciones! Adivinaste el número {computer_number} correctamente.')
+    print(f'Congratulations! you guess my number{computer_number}.')
+
 
 # Llamar a la función
 guess(10)
