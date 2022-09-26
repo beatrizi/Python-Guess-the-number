@@ -15,7 +15,7 @@ print('''
     ''')
 
 def computer_guess(number):
-    print(f'Escriba el rango de numero a adivinar que sera desde el 1 hasta {number} . La computadora intentara adivinar')
+    print(f'Escriba el rango de numero a adivinar que sera desde el 1 hasta {number} . La computadora intentara adivinar\n\n')
     
     #intervalos de valores
     limite_inferior = 1
@@ -33,7 +33,7 @@ def computer_guess(number):
             prediccionPCU = limite_inferior #tb puede ser el limite inferior
         
         #Obtener feedback del usuario para ayudar a adivinar el numero a la compu y convertirlo en mayuscula
-        user_input = input(f'Mi numero que adivine es: {prediccionPCU}\nSi es muy alta, ingresa (A)\nsi es baja, ingresa (B)\nsi es correcta ingresa (C)\n ').upper()
+        user_input = input(f'El numero que adivino el CPU es: {prediccionPCU}\n- si es muy alta, ingresa (A)\n- si es baja, ingresa (B)\n- si es correcta ingresa (C)\n  ')
 
         if user_input =="A":
             limite_superior = prediccionPCU-1
@@ -42,6 +42,6 @@ def computer_guess(number):
     print(f'!!CPU has guess your number. It was:  {number}') #terminamos con el loop
 
 
-computer_guess(20)
+computer_guess(15) #Quiero adivinar el 9
 
 
