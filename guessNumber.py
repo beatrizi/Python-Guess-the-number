@@ -42,6 +42,6 @@ def computer_guess(number):
     print(f'!!CPU has guess your number. It was:  {number}') #terminamos con el loop
 
 
-    computer_guess(20)
+computer_guess(20)
 
 
